@@ -39,6 +39,72 @@ img {
     display: block;
 }
 
+.matrix-background {
+    position: fixed;
+    inset: 0;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+.matrix {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+
+    width: 1000px;
+    height: 1000px;
+
+    transform:
+            translate(-50%, -50%)
+            rotate(-8deg);
+
+    opacity: 0.16;
+}
+
+.matrix-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    border: 1px solid rgba(70, 115, 120, 0.14);
+
+    color: rgba(105, 170, 175, 0.34);
+
+    font-family:
+            "SFMono-Regular",
+            Consolas,
+            "Liberation Mono",
+            monospace;
+
+    font-size: 11px;
+
+    user-select: none;
+}
+
+.matrix-note {
+    opacity: 0.8;
+}
+
+.matrix-divider {
+    opacity: 0.25;
+}
+
+main {
+    position: relative;
+
+    z-index: 1;
+}
+
 .hero {
     width: min(1180px, calc(100% - 48px));
 
