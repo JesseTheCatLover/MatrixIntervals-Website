@@ -138,6 +138,49 @@ main {
     margin: 0 auto;
 }
 
+.hero-brand,
+.hero h1,
+.hero-description {
+    position: relative;
+}
+
+.hero h1::before,
+.hero-description::before {
+    content: "";
+
+    position: absolute;
+
+    top: -5px;
+    right: -9px;
+    bottom: -5px;
+    left: -9px;
+
+    background: rgba(7, 9, 13, 0.06);
+
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+
+    border-radius: 1px;
+
+    pointer-events: none;
+
+    z-index: -1;
+}
+
+.hero h1::before {
+    top: -6px;
+    right: -12px;
+    bottom: -6px;
+    left: -12px;
+
+    background: rgba(7, 9, 13, 0.07);
+
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+
+    border-radius: 1px;
+}
+
 .hero-brand {
     margin: 0 0 24px;
 
@@ -246,6 +289,15 @@ main {
 }
 
 @media (max-width: 700px) {
+
+    .matrix {
+        width: 900px;
+        height: 900px;
+    }
+
+    .matrix-cell {
+        font-size: 14px;
+    }
 
     .hero {
         width: min(100% - 32px, 1180px);
