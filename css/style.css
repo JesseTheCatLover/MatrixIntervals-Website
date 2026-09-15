@@ -304,69 +304,67 @@ main {
 .button-download {
     background: linear-gradient(
             180deg,
-            #8e64d8 0%,
-            #8250cf 52%,
-            #7444bd 100%
+            #8458c9 0%,
+            #7447bc 52%,
+            #633ba5 100%
     );
 
-    border: 1px solid #5d3b99;
+    border: 1px solid #54318c;
 
     box-shadow:
-            inset 0 1px 0 rgba(255, 255, 255, 0.20),
-            inset 0 -1px 0 rgba(47, 24, 83, 0.65),
+            inset 0 1px 0 rgba(255, 255, 255, 0.19),
+            inset 0 -1px 0 rgba(38, 15, 75, 0.68),
             0 1px 1px rgba(0, 0, 0, 0.25),
-            0 3px 6px rgba(0, 0, 0, 0.22);
+            0 3px 6px rgba(25, 10, 55, 0.28);
 }
 
 .button-download:hover {
-    background:
-            linear-gradient(
-                    180deg,
-                    #a06cdd 0%,
-                    #8754ce 45%,
-                    #7648bd 100%
-            );
+    background: linear-gradient(
+            175deg,
+            #9164d6 0%,
+            #7e50c5 45%,
+            #6d42b0 100%
+    );
 
-    border-color: #7045aa;
+    border-color: #613b9b;
 
     box-shadow:
-            inset 0 1px 1px rgba(255, 255, 255, 0.22),
-            inset 0 -2px 4px rgba(25, 12, 55, 0.30),
-            0 2px 7px rgba(30, 15, 55, 0.34);
+            inset 0 1px 1px rgba(255, 255, 255, 0.21),
+            inset 0 -2px 4px rgba(28, 10, 60, 0.30),
+            0 2px 8px rgba(25, 10, 55, 0.32);
 }
 
 .button-license {
     background: linear-gradient(
             180deg,
-            #438bdd 0%,
-            #3279cf 52%,
-            #2869b7 100%
+            #3d7fce 0%,
+            #306fbe 52%,
+            #265da2 100%
     );
 
-    border: 1px solid #1b4f8b;
+    border: 1px solid #1b4a83;
 
     box-shadow:
-            inset 0 1px 0 rgba(255, 255, 255, 0.20),
-            inset 0 -1px 0 rgba(15, 47, 87, 0.68),
+            inset 0 1px 0 rgba(255, 255, 255, 0.19),
+            inset 0 -1px 0 rgba(8, 34, 78, 0.70),
             0 1px 1px rgba(0, 0, 0, 0.25),
-            0 3px 6px rgba(0, 0, 0, 0.22);
+            0 3px 6px rgba(8, 30, 70, 0.28);
 }
 
 .button-license:hover {
-    background:
-            linear-gradient(
-                    180deg,
-                    #4e92e1 0%,
-                    #367dce 45%,
-                    #2d6abb 100%
-            );
+    background: linear-gradient(
+            175deg,
+            #478bd8 0%,
+            #3679c9 45%,
+            #2b68b0 100%
+    );
 
-    border-color: #285f9f;
+    border-color: #225894;
 
     box-shadow:
-            inset 0 1px 1px rgba(255, 255, 255, 0.22),
-            inset 0 -2px 4px rgba(8, 28, 65, 0.30),
-            0 2px 7px rgba(10, 35, 75, 0.34);
+            inset 0 1px 1px rgba(255, 255, 255, 0.21),
+            inset 0 -2px 4px rgba(7, 28, 70, 0.31),
+            0 2px 8px rgba(8, 30, 70, 0.32);
 }
 
 .hero-screenshot {
