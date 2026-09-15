@@ -39,6 +39,90 @@ img {
     display: block;
 }
 
+.matrix-background {
+    position: fixed;
+    inset: 0;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 0;
+
+    mask-image: radial-gradient(
+            ellipse 75% 65% at center,
+            black 0%,
+            black 55%,
+            transparent 100%
+    );
+}
+
+.matrix {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    display: grid;
+
+    grid-template-columns: repeat(12, 1fr);
+
+    width: 1500px;
+    height: 1500px;
+
+    transform:
+            translate(-50%, -50%)
+            rotate(-8deg);
+
+    opacity: 0.34;
+}
+
+.matrix-cell {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(75, 125, 130, 0.22);
+
+    color: rgba(110, 180, 185, 0.50);
+
+    font-family:
+            "SFMono-Regular",
+            Consolas,
+            "Liberation Mono",
+            monospace;
+
+    font-size: 20px;
+    font-weight: 400;
+
+    transition:
+            color 700ms ease,
+            background-color 700ms ease,
+            border-color 700ms ease,
+            box-shadow 700ms ease;
+
+    user-select: none;
+}
+
+.matrix-cell.active {
+    color: rgba(120, 220, 215, 0.90);
+
+    background: rgba(70, 130, 135, 0.12);
+
+    border-color: rgba(95, 175, 175, 0.45);
+
+    box-shadow:
+            inset 0 0 30px rgba(70, 150, 150, 0.08),
+            0 0 20px rgba(70, 150, 150, 0.05);
+}
+
+main {
+    position: relative;
+
+    z-index: 1;
+}
+
 .hero {
     width: min(1180px, calc(100% - 48px));
 
