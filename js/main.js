@@ -1,5 +1,7 @@
 // Copyright 2026 JesseTheCatLover. All Rights Reserved.
 
+// Background Matrix
+
 const notes = [
     { name: "C", weight: 10 },
     { name: "C#", weight: 5 },
@@ -82,3 +84,50 @@ setInterval(
     highlightNextCell,
     900
 );
+
+// Feature Screenshot Browsers
+
+function createScreenshotBrowser(browser) {
+    const image = browser.querySelector(".feature-browser-image");
+
+    const previousButton = browser.querySelector(
+        ".feature-browser-previous"
+    );
+
+    const nextButton = browser.querySelector(
+        ".feature-browser-next"
+    );
+
+    const images = JSON.parse(
+        browser.dataset.images
+    );
+
+    let currentIndex = 0;
+
+    function renderImage() {
+        image.src = images[currentIndex].src;
+        image.alt = images[currentIndex].alt;
+    }
+
+    previousButton.addEventListener("click", () => {
+        currentIndex =
+            (currentIndex - 1 + images.length) %
+            images.length;
+
+        renderImage();
+    });
+
+    nextButton.addEventListener("click", () => {
+        currentIndex =
+            (currentIndex + 1) %
+            images.length;
+
+        renderImage();
+    });
+
+    renderImage();
+}
+
+document
+    .querySelectorAll(".feature-browser")
+    .forEach(createScreenshotBrowser);
