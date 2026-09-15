@@ -105,6 +105,20 @@ img {
     user-select: none;
 }
 
+
+@media (max-width: 700px) {
+
+    .matrix {
+        width: 900px;
+        height: 900px;
+    }
+
+    .matrix-cell {
+        font-size: 14px;
+    }
+
+}
+
 .matrix-cell.active {
     color: rgba(120, 220, 215, 0.90);
 
