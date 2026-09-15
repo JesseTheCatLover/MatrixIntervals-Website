@@ -17,18 +17,40 @@ const notes = [
 
 const matrix = document.getElementById("interval-matrix");
 
-for (const rowNote of notes) {
-    for (const columnNote of notes) {
+for (let row = 0; row < notes.length; row++) {
+    for (let column = 0; column < notes.length; column++) {
         const cell = document.createElement("div");
 
         cell.className = "matrix-cell";
 
-        cell.innerHTML = `
-            <span class="matrix-note">${rowNote}</span>
-            <span class="matrix-divider">→</span>
-            <span class="matrix-note">${columnNote}</span>
-        `;
+        const noteIndex = (row + column) % notes.length;
+
+        cell.textContent = notes[noteIndex];
 
         matrix.appendChild(cell);
     }
 }
+
+const cells = Array.from(
+    document.querySelectorAll(".matrix-cell")
+);
+
+let activeIndex = 0;
+
+function highlightNextCell() {
+    cells.forEach((cell) => {
+        cell.classList.remove("active");
+    });
+
+    cells[activeIndex].classList.add("active");
+
+    activeIndex =
+        (activeIndex + 7) % cells.length;
+}
+
+highlightNextCell();
+
+setInterval(
+    highlightNextCell,
+    900
+);
