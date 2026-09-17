@@ -1382,21 +1382,55 @@ main {
     }
 
     .download-platform {
-        min-height: 250px;
+        min-height: 0;
 
-        padding: 28px 20px 30px;
+        flex-direction: row;
+        align-items: center;
+
+        padding: 18px;
+
+        text-align: left;
     }
 
     .download-platform-icon {
-        width: 100px;
-        height: 100px;
+        flex: 0 0 auto;
 
-        margin-bottom: 20px;
+        width: 56px;
+        height: 56px;
+
+        margin: 0 16px 0 0;
     }
 
     .download-platform-icon svg {
-        width: 78px;
-        height: 78px;
+        width: 48px;
+        height: 48px;
+    }
+
+    .download-platform-content {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        flex: 1;
+
+        width: auto;
+        min-width: 0;
+    }
+
+    .download-platform-label {
+        margin: 0;
+
+        font-size: 17px;
+        white-space: nowrap;
+    }
+
+    .download-platform .button {
+        min-width: 120px;
+        min-height: 40px;
+
+        padding: 0 16px;
+
+        font-size: 14px;
     }
 
     .download-activation {
@@ -1408,10 +1442,32 @@ main {
     .download-steps {
         grid-template-columns: repeat(2, 1fr);
 
-        gap: 10px;
+        gap: 8px;
 
+        max-width: 100%;
         margin-top: 32px;
     }
+
+    .download-step {
+        padding: 18px 14px;
+
+        border-radius: 6px;
+
+        text-align: left;
+    }
+
+    .download-step span {
+        margin-bottom: 10px;
+
+        font-size: 11px;
+        font-weight: 600;
+    }
+
+    .download-step p {
+        font-size: 15px;
+        font-weight: 500;
+    }
+
 
 }
 
