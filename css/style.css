@@ -1186,6 +1186,9 @@ main {
 
     background: rgba(10, 14, 18, 0.28);
 
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+
     text-align: center;
 }
 
@@ -1297,6 +1300,9 @@ main {
     border-radius: 7px;
 
     background: rgba(10, 14, 18, 0.30);
+
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
 }
 
 .download-step span {
