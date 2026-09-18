@@ -1382,55 +1382,21 @@ main {
     }
 
     .download-platform {
-        min-height: 0;
+        min-height: 250px;
 
-        flex-direction: row;
-        align-items: center;
-
-        padding: 18px;
-
-        text-align: left;
+        padding: 28px 20px 30px;
     }
 
     .download-platform-icon {
-        flex: 0 0 auto;
+        width: 100px;
+        height: 100px;
 
-        width: 56px;
-        height: 56px;
-
-        margin: 0 16px 0 0;
+        margin-bottom: 20px;
     }
 
     .download-platform-icon svg {
-        width: 48px;
-        height: 48px;
-    }
-
-    .download-platform-content {
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-
-        flex: 1;
-
-        width: auto;
-        min-width: 0;
-    }
-
-    .download-platform-label {
-        margin: 0;
-
-        font-size: 17px;
-        white-space: nowrap;
-    }
-
-    .download-platform .button {
-        min-width: 120px;
-        min-height: 40px;
-
-        padding: 0 16px;
-
-        font-size: 14px;
+        width: 78px;
+        height: 78px;
     }
 
     .download-activation {
@@ -1442,32 +1408,10 @@ main {
     .download-steps {
         grid-template-columns: repeat(2, 1fr);
 
-        gap: 8px;
+        gap: 10px;
 
-        max-width: 100%;
         margin-top: 32px;
     }
-
-    .download-step {
-        padding: 18px 14px;
-
-        border-radius: 6px;
-
-        text-align: left;
-    }
-
-    .download-step span {
-        margin-bottom: 10px;
-
-        font-size: 11px;
-        font-weight: 600;
-    }
-
-    .download-step p {
-        font-size: 15px;
-        font-weight: 500;
-    }
-
 
 }
 
@@ -1476,6 +1420,408 @@ main {
     .download-page-back,
     .button {
         transition: none;
+    }
+
+}
+
+/* License Page */
+
+.license-page {
+    width: min(920px, calc(100% - 48px));
+
+    margin: 0 auto;
+
+    padding: 80px 0 40px;
+}
+
+.license-page-header {
+    max-width: 760px;
+
+    margin: 0 auto 76px;
+
+    text-align: center;
+}
+
+.license-page-back {
+    display: inline-block;
+
+    margin-bottom: 56px;
+
+    color: #7f8791;
+
+    font-size: 14px;
+
+    transition:
+            color 140ms ease;
+}
+
+.license-page-back:hover {
+    color: #d5d9df;
+}
+
+.license-page-title,
+.license-page-description {
+    position: relative;
+}
+
+.license-page-title::before,
+.license-page-description::before {
+    content: "";
+
+    position: absolute;
+
+    top: -5px;
+    right: -9px;
+    bottom: -5px;
+    left: -9px;
+
+    background: rgba(7, 9, 13, 0.06);
+
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+
+    border-radius: 1px;
+
+    pointer-events: none;
+
+    z-index: -1;
+}
+
+.license-page-title::before {
+    top: -6px;
+    right: -12px;
+    bottom: -6px;
+    left: -12px;
+
+    background: rgba(7, 9, 13, 0.07);
+
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+
+    border-radius: 1px;
+}
+
+.license-page-title {
+    margin: 0;
+
+    color: #e9ebf0;
+
+    font-size: clamp(42px, 6vw, 68px);
+    font-weight: 600;
+
+    line-height: 1.08;
+    letter-spacing: -0.035em;
+}
+
+.license-page-title span {
+    display: block;
+
+    color: #6bc7c2;
+}
+
+.license-page-description {
+    max-width: 650px;
+
+    margin: 28px auto 0;
+
+    color: #9aa1ad;
+
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.license-offer {
+    display: grid;
+
+    grid-template-columns: 1fr auto;
+
+    align-items: center;
+
+    gap: 48px;
+
+    padding: 36px 40px;
+
+    border: 1px solid rgba(55, 70, 75, 0.38);
+    border-radius: 9px;
+
+    background: rgba(10, 14, 18, 0.32);
+
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.license-offer-content {
+    text-align: left;
+}
+
+.license-offer-label {
+    margin: 0 0 12px;
+
+    color: #6bc7c2;
+
+    font-family:
+            "SFMono-Regular",
+            Consolas,
+            "Liberation Mono",
+            monospace;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    letter-spacing: 0.10em;
+}
+
+.license-offer h2 {
+    margin: 0;
+
+    color: #e0e3eb;
+
+    font-size: 28px;
+    font-weight: 600;
+
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+.license-offer-details {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 20px 28px;
+
+    margin-top: 22px;
+}
+
+.license-offer-detail {
+    color: #8f98a3;
+
+    font-size: 14px;
+}
+
+.license-offer-detail strong {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #c9ced6;
+
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.license-offer-action {
+    display: flex;
+
+    justify-content: center;
+}
+
+.license-offer-action .button-license {
+    min-width: 190px;
+}
+
+.license-process {
+    margin-top: 72px;
+}
+
+.license-process-header {
+    margin-bottom: 30px;
+
+    text-align: center;
+}
+
+.license-process-header h2 {
+    margin: 0;
+
+    color: #e0e3eb;
+
+    font-size: 30px;
+    font-weight: 600;
+
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+.license-process-header p {
+    max-width: 580px;
+
+    margin: 12px auto 0;
+
+    color: #7f8791;
+
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.license-steps {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 10px;
+}
+
+.license-step {
+    padding: 20px 16px;
+
+    border: 1px solid rgba(55, 70, 75, 0.30);
+    border-radius: 7px;
+
+    background: rgba(10, 14, 18, 0.28);
+
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.license-step span {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #6bc7c2;
+
+    font-family:
+            "SFMono-Regular",
+            Consolas,
+            "Liberation Mono",
+            monospace;
+
+    font-size: 12px;
+}
+
+.license-step h3 {
+    margin: 0;
+
+    color: #d1d5dc;
+
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.license-step p {
+    margin: 8px 0 0;
+
+    color: #7f8791;
+
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.license-note {
+    max-width: 640px;
+
+    margin: 34px auto 0;
+
+    text-align: center;
+
+    color: #6f7883;
+
+    font-size: 13px;
+    line-height: 1.7;
+
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+@media (max-width: 800px) {
+
+    .license-offer {
+        grid-template-columns: 1fr;
+
+        gap: 28px;
+
+        padding: 30px 24px;
+    }
+
+    .license-offer-action {
+        justify-content: flex-start;
+    }
+
+    .license-process {
+        margin-top: 60px;
+    }
+
+    .license-steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .license-page {
+        width: min(100% - 32px, 920px);
+
+        padding: 48px 0 40px;
+    }
+
+    .license-page-header {
+        margin-bottom: 56px;
+    }
+
+    .license-page-back {
+        margin-bottom: 44px;
+    }
+
+    .license-page-title {
+        font-size: clamp(36px, 11vw, 52px);
+    }
+
+    .license-page-description {
+        font-size: 16px;
+
+        line-height: 1.65;
+    }
+
+    .license-offer {
+        padding: 26px 20px;
+    }
+
+    .license-offer h2 {
+        font-size: 25px;
+    }
+
+    .license-offer-details {
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 18px;
+    }
+
+    .license-offer-action .button-license {
+        width: 100%;
+    }
+
+    .license-process-header {
+        text-align: left;
+    }
+
+    .license-process-header p {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .license-steps {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 8px;
+    }
+
+    .license-step {
+        padding: 18px 14px;
+    }
+
+    .license-step h3 {
+        font-size: 14px;
+    }
+
+    .license-step p {
+        font-size: 12px;
+    }
+
+    .license-note {
+        text-align: left;
     }
 
 }
