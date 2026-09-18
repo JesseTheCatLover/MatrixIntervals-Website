@@ -1565,10 +1565,11 @@ main {
             "Liberation Mono",
             monospace;
 
-    font-size: 14px;
-    font-weight: 800;
+    font-size: 11px;
+    font-weight: 600;
 
     letter-spacing: 0.10em;
+    text-transform: uppercase;
 }
 
 .license-offer h2 {
@@ -1686,7 +1687,7 @@ main {
             "Liberation Mono",
             monospace;
 
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .license-step h3 {
@@ -1718,9 +1719,6 @@ main {
 
     font-size: 13px;
     line-height: 1.7;
-
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
 }
 
 @media (max-width: 800px) {
@@ -1822,6 +1820,287 @@ main {
 
     .license-note {
         text-align: left;
+    }
+
+}
+/* Contact Page */
+
+.contact-page {
+    width: min(920px, calc(100% - 48px));
+
+    margin: 0 auto;
+
+    padding: 80px 0 40px;
+}
+
+.contact-page-header {
+    max-width: 760px;
+
+    margin: 0 auto 72px;
+
+    text-align: center;
+}
+
+.contact-page-back {
+    display: inline-block;
+
+    margin-bottom: 56px;
+
+    color: #7f8791;
+
+    font-size: 14px;
+
+    transition:
+            color 140ms ease;
+}
+
+.contact-page-back:hover {
+    color: #d5d9df;
+}
+
+.contact-page-title,
+.contact-page-description {
+    position: relative;
+}
+
+.contact-page-title::before,
+.contact-page-description::before {
+    content: "";
+
+    position: absolute;
+
+    top: -5px;
+    right: -9px;
+    bottom: -5px;
+    left: -9px;
+
+    background: rgba(7, 9, 13, 0.06);
+
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+
+    border-radius: 1px;
+
+    pointer-events: none;
+
+    z-index: -1;
+}
+
+.contact-page-title::before {
+    top: -6px;
+    right: -12px;
+    bottom: -6px;
+    left: -12px;
+
+    background: rgba(7, 9, 13, 0.07);
+
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.contact-page-title {
+    margin: 0;
+
+    color: #e9ebf0;
+
+    font-size: clamp(42px, 6vw, 68px);
+    font-weight: 600;
+
+    line-height: 1.08;
+    letter-spacing: -0.035em;
+}
+
+.contact-page-title span {
+    display: block;
+
+    color: #6bc7c2;
+}
+
+.contact-page-description {
+    max-width: 620px;
+
+    margin: 28px auto 0;
+
+    color: #9aa1ad;
+
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.contact-methods {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 16px;
+}
+
+.contact-method {
+    display: flex;
+
+    flex-direction: column;
+    justify-content: space-between;
+
+    min-height: 260px;
+
+    padding: 30px;
+
+    border: 1px solid rgba(55, 70, 75, 0.34);
+    border-radius: 10px;
+
+    background: rgba(10, 14, 18, 0.28);
+
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.contact-method-content {
+    max-width: 440px;
+}
+
+.contact-method-label {
+    margin: 0 0 14px;
+
+    color: #6bc7c2;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.contact-method h2 {
+    margin: 0;
+
+    color: #e0e3eb;
+
+    font-size: clamp(24px, 3vw, 30px);
+    font-weight: 600;
+
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+.contact-method p:not(.contact-method-label) {
+    margin: 16px 0 0;
+
+    color: #89929d;
+
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.contact-method .button {
+    align-self: flex-start;
+
+    margin-top: 26px;
+}
+
+.contact-method-email .button {
+    background: rgba(24, 31, 36, 0.72);
+
+    border-color: #374148;
+
+    box-shadow:
+            inset 0 1px 0 rgba(255, 255, 255, 0.07),
+            0 2px 6px rgba(0, 0, 0, 0.18);
+}
+
+.contact-method-email .button:hover {
+    background: rgba(31, 40, 46, 0.82);
+
+    border-color: #46545c;
+
+    box-shadow:
+            inset 0 1px 1px rgba(255, 255, 255, 0.09),
+            0 2px 8px rgba(0, 0, 0, 0.22);
+}
+
+.contact-github {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-top: 28px;
+
+    text-align: center;
+}
+
+.contact-github p {
+    margin: 0;
+
+    color: #6f7883;
+
+    font-size: 14px;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.contact-github a {
+    color: #aeb5bf;
+
+    font-size: 14px;
+
+    transition:
+            color 140ms ease;
+}
+
+.contact-github a:hover {
+    color: #e0e3eb;
+}
+
+@media (max-width: 700px) {
+
+    .contact-page {
+        width: min(100% - 32px, 920px);
+
+        padding: 48px 0 40px;
+    }
+
+    .contact-page-header {
+        margin-bottom: 48px;
+    }
+
+    .contact-page-back {
+        margin-bottom: 44px;
+    }
+
+    .contact-page-title {
+        font-size: clamp(36px, 11vw, 52px);
+    }
+
+    .contact-page-description {
+        font-size: 16px;
+
+        line-height: 1.65;
+    }
+
+    .contact-methods {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+    }
+
+    .contact-method {
+        min-height: 0;
+
+        padding: 24px 20px;
+    }
+
+    .contact-method h2 {
+        font-size: 24px;
+    }
+
+    .contact-method .button {
+        width: 100%;
+    }
+
+    .contact-github {
+        flex-direction: column;
     }
 
 }
