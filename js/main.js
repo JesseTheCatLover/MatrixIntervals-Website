@@ -98,6 +98,14 @@ function createScreenshotBrowser(browser) {
         ".feature-browser-next"
     );
 
+    const currentCounter = browser.querySelector(
+        ".feature-browser-current"
+    );
+
+    const totalCounter = browser.querySelector(
+        ".feature-browser-total"
+    );
+
     const images = JSON.parse(
         browser.dataset.images
     );
@@ -107,6 +115,9 @@ function createScreenshotBrowser(browser) {
     function renderImage() {
         image.src = images[currentIndex].src;
         image.alt = images[currentIndex].alt;
+
+        currentCounter.textContent = currentIndex + 1;
+        totalCounter.textContent = images.length;
     }
 
     previousButton.addEventListener("click", () => {
