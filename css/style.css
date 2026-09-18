@@ -375,11 +375,6 @@ main {
 .about-image-frame,
 .feature-browser-frame {
     overflow: hidden;
-
-    border: 1px solid #202a2e;
-    border-radius: 10px;
-
-    background: #0b0f13;
 }
 
 .screenshot-frame {
@@ -578,12 +573,28 @@ main {
 
     flex: 1;
 
+    height: clamp(300px, 30vw, 440px);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+
+    background: transparent;
+
     box-shadow:
             0 24px 70px rgba(0, 0, 0, 0.25);
 }
 
 .feature-browser-image {
-    width: 100%;
+    display: block;
+
+    max-width: 100%;
+    max-height: 100%;
+
+    width: auto;
     height: auto;
 
     transition:
@@ -669,21 +680,14 @@ main {
     display: grid;
 
     grid-template-columns:
-            minmax(260px, 0.7fr)
-            minmax(0, 1.3fr);
+            minmax(260px, 0.65fr)
+            minmax(0, 1.35fr);
 
     align-items: center;
 
     gap: 70px;
 
-    margin-top: 10px;
-
-    padding: 48px 52px;
-
-    border: 1px solid rgba(55, 70, 75, 0.40);
-    border-radius: 10px;
-
-    background: rgba(10, 14, 18, 0.42);
+    margin-bottom: 120px;
 }
 
 .personalize-content {
@@ -943,6 +947,10 @@ main {
 
     .feature-browser-frame {
         width: 100%;
+
+        height: clamp(260px, 72vw, 420px);
+
+        background: transparent;
     }
 
     .feature-browser-button {
@@ -975,9 +983,9 @@ main {
     .personalize-feature {
         grid-template-columns: 1fr;
 
-        gap: 28px;
+        gap: 24px;
 
-        padding: 32px 20px;
+        margin-bottom: 72px;
     }
 
     .personalize-content {
@@ -986,12 +994,6 @@ main {
         margin: 0 auto;
 
         text-align: center;
-    }
-
-    .personalize-browser {
-        width: 100%;
-
-        padding: 0 32px;
     }
 
     .download-section {
