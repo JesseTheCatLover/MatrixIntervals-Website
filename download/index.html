@@ -89,7 +89,7 @@
 
                     <a
                             class="button button-download"
-                            href="#"
+                            href="../downloads/MatrixIntervals-1.0-Windows-Setup.exe"
                     >
                         Download
                     </a>
@@ -114,7 +114,7 @@
 
                     <a
                             class="button button-download"
-                            href="#"
+                            href="../downloads/MatrixIntervals-1.0-macOS-silicon-arm64.dmg"
                     >
                         Download
                     </a>
@@ -140,6 +140,7 @@
                     <a
                             class="button button-download"
                             href="#"
+                            id="linux-download-button"
                     >
                         Download
                     </a>
@@ -280,6 +281,58 @@
     </div>
 
 </footer>
+
+<!-- Linux unavailable popup -->
+
+<div
+        class="download-modal"
+        id="linux-download-modal"
+        aria-hidden="true"
+>
+    <div
+            class="download-modal-backdrop"
+            id="linux-download-backdrop"
+    ></div>
+
+    <div
+            class="download-modal-content"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="linux-download-title"
+    >
+
+        <button
+                class="download-modal-close"
+                id="linux-download-close"
+                type="button"
+                aria-label="Close"
+        >
+            ×
+        </button>
+
+        <p class="section-label">
+            Linux
+        </p>
+
+        <h2 id="linux-download-title">
+            Coming soon...
+        </h2>
+
+        <p>
+            MatrixIntervals is not currently available for Linux.
+            A Linux version is in development and will be available soon.
+        </p>
+
+        <button
+                class="button button-download"
+                id="linux-download-ok"
+                type="button"
+        >
+            Got it
+        </button>
+
+    </div>
+</div>
 
 <script src="../js/main.js"></script>
 

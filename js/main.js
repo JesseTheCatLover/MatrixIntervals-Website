@@ -142,3 +142,83 @@ function createScreenshotBrowser(browser) {
 document
     .querySelectorAll(".feature-browser")
     .forEach(createScreenshotBrowser);
+
+// Linux Download Modal
+
+const linuxDownloadButton = document.getElementById(
+    "linux-download-button"
+);
+
+const linuxDownloadModal = document.getElementById(
+    "linux-download-modal"
+);
+
+const linuxDownloadClose = document.getElementById(
+    "linux-download-close"
+);
+
+const linuxDownloadOk = document.getElementById(
+    "linux-download-ok"
+);
+
+const linuxDownloadBackdrop = document.getElementById(
+    "linux-download-backdrop"
+);
+
+if (
+    linuxDownloadButton &&
+    linuxDownloadModal &&
+    linuxDownloadClose &&
+    linuxDownloadOk &&
+    linuxDownloadBackdrop
+) {
+    function openLinuxDownloadModal() {
+        linuxDownloadModal.classList.add("is-open");
+        linuxDownloadModal.setAttribute(
+            "aria-hidden",
+            "false"
+        );
+
+        document.body.style.overflow = "hidden";
+    }
+
+    function closeLinuxDownloadModal() {
+        linuxDownloadModal.classList.remove("is-open");
+        linuxDownloadModal.setAttribute(
+            "aria-hidden",
+            "true"
+        );
+
+        document.body.style.overflow = "";
+    }
+
+    linuxDownloadButton.addEventListener("click", (event) => {
+        event.preventDefault();
+
+        openLinuxDownloadModal();
+    });
+
+    linuxDownloadClose.addEventListener(
+        "click",
+        closeLinuxDownloadModal
+    );
+
+    linuxDownloadOk.addEventListener(
+        "click",
+        closeLinuxDownloadModal
+    );
+
+    linuxDownloadBackdrop.addEventListener(
+        "click",
+        closeLinuxDownloadModal
+    );
+
+    document.addEventListener("keydown", (event) => {
+        if (
+            event.key === "Escape" &&
+            linuxDownloadModal.classList.contains("is-open")
+        ) {
+            closeLinuxDownloadModal();
+        }
+    });
+}

@@ -827,6 +827,94 @@ main {
     font-size: 12px;
 }
 
+/* --- Download modal --- */
+
+.download-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 24px;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition:
+            opacity 0.2s ease,
+            visibility 0.2s ease;
+}
+
+.download-modal.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.download-modal-backdrop {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(6px);
+}
+
+.download-modal-content {
+    position: relative;
+    z-index: 1;
+
+    width: min(480px, 100%);
+
+    padding: 40px;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+
+    background: #111;
+
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.4);
+
+    transform: translateY(12px);
+    transition: transform 0.2s ease;
+}
+
+.download-modal.is-open .download-modal-content {
+    transform: translateY(0);
+}
+
+.download-modal-content h2 {
+    margin-bottom: 16px;
+}
+
+.download-modal-content p:not(.section-label) {
+    margin-bottom: 28px;
+    line-height: 1.6;
+}
+
+.download-modal-close {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+
+    border: none;
+    background: none;
+
+    color: inherit;
+    font-size: 28px;
+    line-height: 1;
+
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.download-modal-close:hover {
+    opacity: 1;
+}
+
 /* Responsive */
 
 @media (max-width: 800px) {
