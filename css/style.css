@@ -380,6 +380,7 @@ main {
 .screenshot-frame {
     box-shadow:
             0 30px 80px rgba(0, 0, 0, 0.35);
+    border-radius: 10px;
 }
 
 .screenshot-frame img {
