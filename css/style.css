@@ -277,7 +277,6 @@ main {
 
 /* --- Get Started --- */
 
-
 .getstarted-prompt {
     position: relative;
 
@@ -290,7 +289,7 @@ main {
 
     width: fit-content;
 
-    margin: 10px auto 0;
+    margin: 12px auto 0;
 
     color: #7f8791;
 
@@ -453,7 +452,7 @@ main {
 }
 
 .hero-screenshot {
-    margin-top: 50px;
+    margin-top: 45px;
 }
 
 .screenshot-frame,
@@ -801,7 +800,7 @@ main {
 
     margin: 0 auto;
 
-    padding: 80px 0 110px;
+    padding: 80px 0 140px;
 
     text-align: center;
 }
@@ -1027,24 +1026,8 @@ main {
         margin-top: 30px;
     }
 
-    .getstarted-prompt {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 7px;
-
-        margin-top: 10px;
-
-        color: #7f8791;
-        font-size: 13px;
-    }
-
-    .getstarted-prompt a {
-        color: #aeb5bf;
-        font-weight: 500;
-    }
     .hero-screenshot {
-        margin-top: 18px;
+        margin-top: 22px;
     }
 
     .about-section {
@@ -1193,7 +1176,7 @@ main {
     .download-section {
         width: min(100% - 32px, 900px);
 
-        padding: 48px 0 66px;
+        padding: 48px 0 96px;
     }
 
     .download-content h2 {
