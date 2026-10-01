@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Estedad:wght@400;500;600;700&display=swap");
+
 /* --- Coming Soon Page --- */
 
 .coming-soon-page {
@@ -198,6 +200,34 @@
 .coming-soon-guide {
     color: inherit;
     text-decoration: none;
+}
+
+
+/* --- Persian Typography --- */
+
+html[lang="fa"] body {
+    font-family: "Estedad", sans-serif;
+}
+
+html[lang="fa"] .coming-soon-title {
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+}
+
+html[lang="fa"] .coming-soon-description {
+    line-height: 1.9;
+}
+
+html[lang="fa"] .coming-soon-guide h2 {
+    line-height: 1.4;
+}
+
+html[lang="fa"] .coming-soon-guide > div > p:last-child {
+    line-height: 1.9;
+}
+
+html[lang="fa"] .language-switch {
+    font-family: "Estedad", sans-serif;
 }
 
 /* --- Mobile --- */

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Estedad:wght@400;500;600;700&display=swap");
+
 /* --- Guide Article --- */
 
 .guide-article {
@@ -102,6 +104,30 @@
 
     box-shadow:
             0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+
+/* --- Persian Typography --- */
+
+html[lang="fa"] .guide-article {
+    font-family: "Estedad", sans-serif;
+}
+
+html[lang="fa"] .guide-title {
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+}
+
+html[lang="fa"] .guide-description {
+    line-height: 1.9;
+}
+
+html[lang="fa"] .guide-content {
+    line-height: 1.9;
+}
+
+html[lang="fa"] .guide-content h2 {
+    line-height: 1.4;
 }
 
 @media (max-width: 700px) {
