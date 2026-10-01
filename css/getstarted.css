@@ -148,6 +148,11 @@
     opacity: 0.5;
 }
 
+.coming-soon-guide {
+    color: inherit;
+    text-decoration: none;
+}
+
 /* --- Mobile --- */
 
 @media (max-width: 700px) {

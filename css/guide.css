@@ -1,0 +1,138 @@
+/* --- Guide Article --- */
+
+.guide-article {
+    width: min(820px, calc(100% - 48px));
+
+    margin: 0 auto;
+    padding: 64px 0 120px;
+}
+
+.guide-back {
+    display: inline-block;
+
+    margin-bottom: 72px;
+
+    color: inherit;
+    text-decoration: none;
+
+    opacity: 0.7;
+
+    transition: opacity 0.2s ease;
+}
+
+.guide-back:hover {
+    opacity: 1;
+}
+
+.guide-header {
+    max-width: 700px;
+
+    margin-bottom: 72px;
+}
+
+.guide-header .section-label {
+    margin-bottom: 20px;
+}
+
+.guide-title {
+    margin: 0 0 28px;
+
+    font-size: clamp(44px, 6vw, 72px);
+    line-height: 0.98;
+    letter-spacing: -0.04em;
+
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+}
+
+.guide-title span {
+    display: block;
+    opacity: 0.55;
+}
+
+.guide-description {
+    max-width: 620px;
+
+    margin: 0;
+
+    font-size: 18px;
+    line-height: 1.7;
+
+    opacity: 0.75;
+
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+}
+
+.guide-content {
+    font-size: 17px;
+    line-height: 1.75;
+
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+}
+
+.guide-content h2 {
+    margin: 64px 0 16px;
+
+    font-size: 28px;
+    line-height: 1.2;
+}
+
+.guide-content h2:first-child {
+    margin-top: 0;
+}
+
+.guide-content p {
+    margin: 0 0 28px;
+
+    opacity: 0.8;
+}
+
+.guide-content img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    margin: 36px 0 56px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+
+    box-shadow:
+            0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 700px) {
+
+    .guide-article {
+        width: min(100% - 32px, 820px);
+
+        padding-top: 40px;
+    }
+
+    .guide-back {
+        margin-bottom: 56px;
+    }
+
+    .guide-header {
+        margin-bottom: 56px;
+    }
+
+    .guide-title {
+        font-size: clamp(42px, 12vw, 60px);
+    }
+
+    .guide-description {
+        font-size: 16px;
+    }
+
+    .guide-content {
+        font-size: 16px;
+    }
+
+    .guide-content h2 {
+        font-size: 24px;
+    }
+}
