@@ -275,6 +275,91 @@ main {
     margin-top: 36px;
 }
 
+/* --- Get Started --- */
+
+
+.getstarted-prompt {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    width: fit-content;
+
+    margin: 10px auto 0;
+
+    color: #7f8791;
+
+    font-size: 13px;
+    font-weight: 400;
+
+    line-height: 20px;
+
+    white-space: nowrap;
+}
+
+.getstarted-prompt::before {
+    content: "";
+
+    position: absolute;
+
+    top: -4px;
+    right: -9px;
+    bottom: -4px;
+    left: -9px;
+
+    background: rgba(7, 9, 13, 0.06);
+
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+
+    border-radius: 3px;
+
+    pointer-events: none;
+
+    z-index: -1;
+}
+
+.getstarted-prompt > span {
+    color: #7f8791;
+}
+
+.getstarted-prompt a {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    color: #aeb5bf;
+
+    font-weight: 500;
+
+    transition:
+            color 140ms ease;
+}
+
+.getstarted-prompt a > span {
+    display: inline-block;
+
+    transition:
+            transform 140ms ease;
+}
+
+.getstarted-prompt a:hover {
+    color: #e0e3eb;
+}
+
+.getstarted-prompt a:hover > span {
+    transform: translateX(3px);
+}
+
+
+
 /* Buttons */
 
 .button {
@@ -368,7 +453,7 @@ main {
 }
 
 .hero-screenshot {
-    margin-top: 80px;
+    margin-top: 50px;
 }
 
 .screenshot-frame,
@@ -716,7 +801,7 @@ main {
 
     margin: 0 auto;
 
-    padding: 80px 0 140px;
+    padding: 80px 0 110px;
 
     text-align: center;
 }
@@ -942,8 +1027,24 @@ main {
         margin-top: 30px;
     }
 
+    .getstarted-prompt {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 7px;
+
+        margin-top: 10px;
+
+        color: #7f8791;
+        font-size: 13px;
+    }
+
+    .getstarted-prompt a {
+        color: #aeb5bf;
+        font-weight: 500;
+    }
     .hero-screenshot {
-        margin-top: 48px;
+        margin-top: 18px;
     }
 
     .about-section {
@@ -1092,7 +1193,7 @@ main {
     .download-section {
         width: min(100% - 32px, 900px);
 
-        padding: 48px 0 96px;
+        padding: 48px 0 66px;
     }
 
     .download-content h2 {
