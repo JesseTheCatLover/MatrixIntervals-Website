@@ -222,3 +222,76 @@ if (
         }
     });
 }
+
+// --- Language Detection ---
+
+const languagePreferenceKey =
+    "matrixintervals-language";
+
+async function detectLanguage() {
+
+    const currentPath =
+        window.location.pathname;
+
+    if (
+        currentPath !== "/getstarted/" &&
+        currentPath !== "/getstarted/index.html"
+    )
+        return;
+
+    const savedLanguage =
+        localStorage.getItem(languagePreferenceKey);
+
+    if (savedLanguage === "fa") {
+
+        window.location.href =
+            "/per/getstarted/";
+
+        return;
+    }
+
+    if (savedLanguage === "en")
+        return;
+
+    try {
+
+        const response =
+            await fetch("https://ipapi.co/json/");
+
+        if (!response.ok)
+            return;
+
+        const data =
+            await response.json();
+
+        if (data.country_code === "IR") {
+
+            window.location.href =
+                "/per/getstarted/";
+        }
+
+    } catch (error) {
+
+        // Keep English as the fallback.
+    }
+}
+
+detectLanguage();
+
+
+// --- Language Selection ---
+
+document
+    .querySelectorAll("[data-language]")
+    .forEach((link) => {
+
+        link.addEventListener("click", () => {
+
+            localStorage.setItem(
+                languagePreferenceKey,
+                link.dataset.language
+            );
+
+        });
+
+    });

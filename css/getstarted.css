@@ -31,7 +31,7 @@
 .coming-soon-hero {
     max-width: 700px;
 
-    margin-bottom: 72px;
+    margin-bottom: 45px;
 }
 
 .coming-soon-hero .section-label {
@@ -67,6 +67,53 @@
     line-height: 1.7;
 
     opacity: 0.75;
+}
+
+/* --- Language Switch --- */
+
+.language-switch {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 0px;
+    margin-bottom: 15px;
+    padding: 9px 14px;
+
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 8px;
+
+    background: rgba(255, 255, 255, 0.035);
+
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+
+    font-size: 14px;
+
+    box-shadow:
+            0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.language-switch a {
+    color: #e0e3eb;
+    text-decoration: none;
+
+    opacity: 0.65;
+
+    transition:
+            opacity 0.2s ease,
+            color 0.2s ease;
+}
+
+.language-switch a:hover {
+    opacity: 1;
+    color: #6bc7c2;
+}
+
+.language-switch span {
+    color: #7f8791;
+    opacity: 0.6;
 }
 
 /* --- Guides --- */
